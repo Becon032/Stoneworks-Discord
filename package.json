@@ -1,0 +1,19 @@
+{
+  "name": "discordbot",
+  "version": "1.0.0",
+  "description": "Management discord bot of skjoldrbrodir in stoneworks minecraft server",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Becon032/Stoneworks-Discord.git"
+  },
+  "author": "Becon032",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Becon032/Stoneworks-Discord/issues"
+  },
+  "homepage": "https://github.com/Becon032/Stoneworks-Discord#readme"
+}
