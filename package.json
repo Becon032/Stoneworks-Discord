@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Becon032/Stoneworks-Discord/issues"
   },
-  "homepage": "https://github.com/Becon032/Stoneworks-Discord#readme"
+  "homepage": "https://github.com/Becon032/Stoneworks-Discord#readme",
+  "dependencies": {
+    "discord.js": "^12.5.3"
+  }
 }
