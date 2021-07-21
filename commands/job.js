@@ -45,6 +45,7 @@ module.exports = {
                 
                 let userId = await reaction.message.guild.members.cache.get(user.id);
 
+                //this takes a lot of time, need to change that
                 userId.roles.remove(brewer);
                 userId.roles.remove(farmer);
                 userId.roles.remove(miner);
