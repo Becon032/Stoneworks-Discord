@@ -22,7 +22,7 @@ module.exports = {
             if(user.bot) return;
             if(!reaction.message.guild) return;
 
-            if(reaction.message.channel.id == selectChannel /*&& reaction.message.member.roles.cache.has(notInjarldom)*/){
+            if(reaction.message.channel.id == selectChannel && reaction.message.guild.member(user).roles.cache.has(notInjarldom)){
 
                 let userId = await reaction.message.guild.members.cache.get(user.id);
                 let cityName;

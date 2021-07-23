@@ -34,7 +34,7 @@ client.on('guildMemberAdd', guildMember => {
         `Welcome <@${guildMember.user.id}> to server! \n\n`
         + 'Be sure to check #rules channel\n'
         + 'If you want to become a citizen, apply in <#866409707497455676>\n'
-        + 'If you are a diplomat form another nation, #diplomat\n'
+        + 'If you are a diplomat form another nation, <#868122687602561055>\n'
     );
     
 })
@@ -50,10 +50,10 @@ client.on('message', message => {
 
     if(command === 'ping'){
         client.commands.get('ping').execute(message, args);
-    } else if (command === 'reactionrole'){
-        client.commands.get('reactionrole').execute(message, args, Discord, client);
     } else if (command === 'accept' || command === 'Accept' || command === 'accepted' || command === 'Accepted'){
         client.commands.get('accept').execute(message, args, Discord, client);
+    } else if (command === 'clear'){
+        client.commands.get('clear').execute(message, args);
     }
 
 });

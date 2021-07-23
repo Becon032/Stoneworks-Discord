@@ -7,6 +7,7 @@ module.exports = {
         const botCommunicationChannel ='866784449853259776';
 
         const applicant = '866784910147977216';
+        const civilian = '868129195602108446';
 
         const armyEmoji = '⚔️';
         const dragoonEmoji = '🏇';
@@ -18,26 +19,29 @@ module.exports = {
             if(user.bot) return;
             if(!reaction.message.guild) return;
 
-            if(reaction.message.channel.id == selectChannel && !reaction.message.member.roles.cache.has('866784910147977216')){
+            if(reaction.message.channel.id == selectChannel && reaction.message.guild.member(user).roles.cache.has(civilian)){
 
                 let userId = await reaction.message.guild.members.cache.get(user.id);
                 let militaryTypeName;
 
                 switch(reaction.emoji.name){
                     case armyEmoji:
-                        userId.roles.add(applicant);
+                        userId.roles.add(applicant).catch(console.error);
+                        userId.roles.remove(civilian).catch(console.error);
                         militaryTypeName = "Himthitki"
                         tagString = "<@256762652565569536>"
                         //            becon
                         break;
                     case dragoonEmoji:
-                        userId.roles.add(applicant);
+                        userId.roles.add(applicant).catch(console.error);
+                        userId.roles.remove(civilian).catch(console.error);
                         militaryTypeName = "Dragoon cavalry"
                         tagString = "<@256762652565569536>"
                         //            becon
                         break;
                     case guardEmoji:
-                        userId.roles.add(applicant);
+                        userId.roles.add(applicant).catch(console.error);
+                        userId.roles.remove(civilian).catch(console.error);
                         militaryTypeName = "Town guard"
                         tagString = "<@256762652565569536>"
                         //            becon
